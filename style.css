@@ -1,0 +1,100 @@
+/* Winkaboo site — the app's paper design: warm paper, dark ink, pastel tiles, bold system headlines. No fonts or scripts from outside. */
+:root{
+  --paper:#F6F1E6; --paper-2:#FBF8F1; --ink:#221811; --ink-soft:#5A4B3E; --line:#E3D9C4;
+  --sage:#E1E8D2; --peach:#F8DFC9; --lilac:#E5E1F3; --butter:#F7EAC1; --sun:#F6D2B4; --caramel:#B8692F;
+  --radius:28px; --max:1040px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:400 1.0625rem/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration-color:rgba(34,24,17,.35);text-underline-offset:.18em}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:3px solid var(--caramel);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-weight:800;letter-spacing:-.03em;margin:0}
+.wrap{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+
+/* header and footer */
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0}
+.brand{display:flex;align-items:center;gap:.55rem;font-weight:800;font-size:1.3rem;letter-spacing:-.03em;text-decoration:none}
+.brand img{width:36px;height:36px}
+.top nav{display:flex;gap:1.1rem;font-weight:600;font-size:.95rem}
+.top nav a{text-decoration:none;padding:.35rem 0}
+.top nav a:hover,.top nav a[aria-current]{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.3em}
+.foot{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;justify-content:space-between;align-items:center;
+  margin-top:2.5rem;padding:1.5rem 0 3rem;border-top:1px solid var(--line);color:var(--ink-soft);font-size:.95rem}
+.foot nav{display:flex;gap:1.2rem;font-weight:600}
+.foot a{color:var(--ink)}
+
+/* landing */
+.hero{display:grid;gap:1.5rem;align-items:center;padding:1rem 0 2.5rem}
+.hero h1{font-size:clamp(2.8rem,10vw,5.2rem);line-height:.98;margin:0 0 1rem}
+.lead{font-size:clamp(1.1rem,3.2vw,1.35rem);color:var(--ink-soft);max-width:34rem;margin:0 0 1.6rem}
+.stage{position:relative;justify-self:center;width:min(78vw,380px);aspect-ratio:1}
+.stage::before{content:"";position:absolute;inset:9% 5% 5% 9%;border-radius:50%;background:var(--sun)}
+.stage img{position:relative;width:100%;height:100%}
+.pill{display:inline-block;background:var(--ink);color:var(--paper);padding:.85rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none}
+.pill.soft{background:var(--paper-2);color:var(--ink);border:2px solid var(--ink)}
+section{padding:1.5rem 0}
+h2.sec{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.05;margin:0 0 1.2rem}
+.tiles{display:grid;gap:1rem}
+.tile{border-radius:var(--radius);padding:1.4rem 1.4rem 1.6rem}
+.tile img{width:150px;height:150px;margin:-.4rem 0 .3rem -.4rem}
+.tile .step{display:inline-grid;place-items:center;width:2rem;height:2rem;border-radius:50%;background:var(--ink);color:var(--paper);font-weight:800;font-size:.95rem;margin-bottom:.6rem}
+.tile h3{font-size:1.6rem;line-height:1.1;margin:0 0 .5rem}
+.tile p{margin:0;color:var(--ink-soft)}
+.sage{background:var(--sage)} .peach{background:var(--peach)} .lilac{background:var(--lilac)} .butter{background:var(--butter)}
+.plans{display:grid;gap:1rem}
+.plan{position:relative;border-radius:var(--radius);padding:1.6rem 1.6rem 1.8rem;overflow:hidden}
+.plan.free{background:var(--paper-2);border:2px solid var(--line)}
+.plan.pro{background:var(--ink);color:var(--paper)}
+.plan h3{font-size:1.5rem;line-height:1.1;margin:0 0 .4rem;padding-right:5.5rem}
+.plan .big{font-size:2.3rem;font-weight:800;letter-spacing:-.03em;line-height:1.1;margin:.2rem 0 .4rem}
+.plan p{margin:0 0 .4rem}
+.plan.free p,.plan.free li{color:var(--ink-soft)}
+.plan.pro p,.plan.pro li{color:rgba(246,241,230,.82)}
+.plan ul{list-style:none;padding:0;margin:.9rem 0 0}
+.plan li{padding-left:1.6rem;position:relative;margin:.3rem 0}
+.plan li::before{content:"✓";position:absolute;left:0;font-weight:800}
+.plan .sticker{position:absolute;top:1rem;right:1rem;width:84px;height:84px}
+.plan.pro .sticker{background:var(--sun);border-radius:50%}
+.plan a{color:inherit}
+.fine{color:var(--ink-soft);font-size:.95rem;margin:1rem 0 0}
+.soon{display:grid;justify-items:center;gap:.6rem;text-align:center;border-radius:var(--radius);background:var(--butter);padding:2rem 1.5rem}
+.soon img{width:120px;height:120px}
+.soon h2{font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.05}
+.soon p{margin:0;color:var(--ink-soft);max-width:30rem}
+
+/* Terms, Privacy, Support */
+.doc{max-width:44rem;padding:1rem 0 1rem}
+.doc h1{font-size:clamp(2.4rem,9vw,3.8rem);line-height:1;margin:.4rem 0 .6rem}
+.doc .meta{color:var(--ink-soft);margin:0 0 1.6rem}
+.doc h2{font-size:1.5rem;line-height:1.15;margin:2.2rem 0 .5rem}
+.doc ul{padding-left:1.25rem}
+.doc li{margin:.35rem 0}
+.summary{background:var(--sage);border-radius:var(--radius);padding:1.2rem 1.5rem 1.3rem;margin:0 0 1rem}
+.summary h2{margin:0 0 .4rem}
+.todo{background:var(--butter);border:2px dashed var(--caramel);border-radius:16px;padding:.9rem 1.1rem}
+.contact{display:grid;gap:.8rem;justify-items:start;background:var(--peach);border-radius:var(--radius);padding:1.5rem;margin:0 0 1.5rem}
+.contact img{width:96px;height:96px}
+.contact h2{margin:0;font-size:1.6rem}
+.contact p{margin:0}
+details{background:var(--paper-2);border:2px solid var(--line);border-radius:20px;padding:.95rem 1.2rem;margin:.7rem 0}
+details[open]{border-color:var(--ink)}
+summary{cursor:pointer;font-weight:700;font-size:1.08rem;list-style-position:outside}
+summary::marker{color:var(--caramel)}
+details p,details ol,details ul{margin:.7rem 0 .2rem}
+details ol,details ul{padding-left:1.25rem}
+
+@media (min-width:760px){
+  .hero{grid-template-columns:1.1fr .9fr;padding:2.5rem 0 4rem}
+  .tiles{grid-template-columns:repeat(3,1fr);gap:1.25rem}
+  .tile img{width:170px;height:170px}
+  .plans{grid-template-columns:1fr 1fr;gap:1.25rem}
+  .foot{margin-top:3.5rem}
+}
+@media (max-width:380px){.top nav{gap:.8rem;font-size:.9rem}.brand{font-size:1.15rem}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
