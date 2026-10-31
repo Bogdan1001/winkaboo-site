@@ -17,12 +17,12 @@
   <h1 data-nf="h">Nothing here.</h1>
   <p data-nf="p">That page doesn’t exist.</p>
   <p><a class="pill" data-nf="b" href="/winkaboo-site/">Back to Winkaboo</a></p>
-  
+  <nav class="nf-langs" aria-label="Languages"><a href="/winkaboo-site/" hreflang="en" lang="en">English</a> <a href="/winkaboo-site/es/" hreflang="es" lang="es">Español</a> <a href="/winkaboo-site/fr/" hreflang="fr" lang="fr">Français</a> <a href="/winkaboo-site/de/" hreflang="de" lang="de">Deutsch</a> <a href="/winkaboo-site/it/" hreflang="it" lang="it">Italiano</a> <a href="/winkaboo-site/pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></nav>
 </main>
 <script>
 // the page that was not found may be in another language: answer in it (the address starts with its folder)
 (function () {
-  var s = {"en":{"h":"Nothing here.","p":"That page doesn’t exist.","b":"Back to Winkaboo","dir":"ltr"}};
+  var s = {"en":{"h":"Nothing here.","p":"That page doesn’t exist.","b":"Back to Winkaboo","dir":"ltr"},"es":{"h":"Aquí no hay nada.","p":"Esa página no existe.","b":"Volver a Winkaboo","dir":"ltr"},"fr":{"h":"Rien ici.","p":"Cette page n’existe pas.","b":"Retour à Winkaboo","dir":"ltr"},"de":{"h":"Hier ist nichts.","p":"Diese Seite gibt es nicht.","b":"Zurück zu Winkaboo","dir":"ltr"},"it":{"h":"Qui non c’è nulla.","p":"Questa pagina non esiste.","b":"Torna a Winkaboo","dir":"ltr"},"pt-BR":{"h":"Nada por aqui.","p":"Esta página não existe.","b":"Voltar ao Winkaboo","dir":"ltr"}};
   var seg = location.pathname.slice("/winkaboo-site/".length).split("/")[0];
   var l = s[seg];
   if (!l || seg === "en") return;
