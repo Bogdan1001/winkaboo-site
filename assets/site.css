@@ -118,6 +118,10 @@ em { font-style: normal; }
 
 .stage { position: relative; z-index: 2; }
 .stage-in { position: relative; display: grid; justify-items: center; padding: 8px 0 28px; }
+/* the people in the phone's photos are generated, and the page says so above it, where they are seen first (EU AI Act
+   Art. 50): the "AI" mark and the words, at the page's own size, never inside the app's screen */
+.ai-note { display: inline-flex; align-items: center; gap: 7px; margin: 0 0 10px; padding: 4px 11px 4px 5px; border-radius: 999px; background: var(--card); box-shadow: 0 0 0 1px var(--line); font-size: 0.8125rem; font-weight: 700; line-height: 1.25; color: var(--ink); }
+.ai-mark { display: inline-grid; place-items: center; min-width: 24px; height: 19px; padding: 0 5px; border-radius: 999px; background: var(--ink); color: var(--paper); font: 800 0.6875rem/1 var(--sans); letter-spacing: 0.03em; }
 .sun { position: absolute; z-index: -1; top: 6%; inset-inline-start: 50%; width: calc(var(--pw) * 1.25); aspect-ratio: 1; border-radius: 50%; background: var(--peach); translate: -40% 0; }
 [dir="rtl"] .sun { translate: 40% 0; }
 .note { display: none; position: absolute; z-index: 3; font-family: var(--hand); font-size: 1.4rem; line-height: 1.05; color: var(--brown); white-space: nowrap; pointer-events: none; transition: opacity 0.4s; }
@@ -147,7 +151,7 @@ em { font-style: normal; }
 .is-live .step.is-on { opacity: 1; }
 
 /* ---------------------------------------------------------------- the phone */
-.stage { --pw: 300px; }
+.stage { --pw: 300px; --ai: 37px; } /* --ai: the AI note above the phone, so the phone and its note fit together */
 .phone {
   position: relative; width: var(--pw); padding: calc(var(--pw) * 0.032); border-radius: calc(var(--pw) * 0.16);
   background: linear-gradient(150deg, #514840 0%, #1a1511 32%, #2c2620 60%, #120e0b 100%);
@@ -475,6 +479,15 @@ em { font-style: normal; }
 .contact h2 { margin: 0 0 4px; font-size: 1.5rem; }
 .contact p { margin: 0 0 10px; }
 .contact .pill { padding: 11px 18px; }
+/* the company's registered details, once site.config.json has them */
+.legal { font-size: 0.9375rem; color: var(--ink-2); }
+.contact .legal { margin: 4px 0 0; font-size: 0.875rem; color: var(--ink); }
+.legal a { white-space: nowrap; }
+/* the Japanese 特定商取引法に基づく表記 */
+.facts { width: 100%; border-collapse: collapse; margin: 6px 0 18px; }
+.facts th, .facts td { padding: 13px 0; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
+.facts th { width: 34%; padding-inline-end: 18px; font-weight: 700; }
+.facts td { color: var(--ink-2); }
 .doc .qa { margin: 10px 0; }
 .is-support .doc > h2 { margin-top: 10px; }
 
@@ -489,7 +502,8 @@ em { font-style: normal; }
 @media (max-width: 959px) {
   .stage { position: sticky; top: calc(56px + env(safe-area-inset-top)); z-index: 3; margin-inline: calc(-1 * var(--pad)); padding-inline: var(--pad); background: var(--paper); }
   .stage::after { content: ""; position: absolute; inset: 100% 0 auto; height: 28px; background: linear-gradient(var(--paper), rgba(246, 241, 230, 0)); pointer-events: none; }
-  .stage { --pw: min(72vw, calc((100svh - 56px) * 0.315), 330px); }
+  .stage { --ai: 41px; --pw: min(72vw, calc((100svh - 56px - var(--ai)) * 0.315), 330px); }
+  .ai-note { margin-top: 4px; } /* clear of the bar, which the stuck stage slides 8px under */
   .stage-in { padding: 6px 0 22px; }
   .sun { top: 4%; }
   .demo-toggle { bottom: 26px; }
@@ -521,15 +535,18 @@ em { font-style: normal; }
   .hero-meta { font-size: 0.9375rem; }
   .story { grid-column: 1; grid-row: 2; padding-top: 30px; }
   .stage { grid-column: 2; grid-row: 1 / span 2; }
-  .stage { --pw: clamp(270px, calc((100svh - 130px) * 0.476), 350px); }
-  .stage-in { position: sticky; top: max(84px, calc(50svh - var(--pw) * 1.049 + 28px)); padding: 0 0 40px; }
+  .stage { --pw: clamp(270px, calc((100svh - 130px - var(--ai)) * 0.476), 350px); }
+  .stage-in { position: sticky; top: max(84px, calc(50svh - var(--pw) * 1.049 - var(--ai) / 2 + 28px)); padding: 0 0 40px; }
   .step { min-height: 72svh; display: flex; flex-direction: column; justify-content: center; padding: 30px 0; }
   .steps { padding-bottom: 6svh; }
   .note { display: block; }
   .note-pose { top: 63%; inset-inline-end: calc(50% + var(--pw) / 2 + 22px); }
   .note-pose svg { top: 30px; inset-inline-start: calc(100% - 26px); }
   .note-hold { top: 44%; inset-inline-start: calc(50% + var(--pw) / 2 + 26px); }
-  .note-hold svg { top: 32px; inset-inline-start: -46px; transform: scaleX(-1) rotate(10deg); }
+  /* the notes beside the phone end before the window does: the room from the note to the column's edge, the page's
+     padding and the margin outside it (8px spare for a scrollbar); a longer one wraps instead of running off */
+  .note-hold, .note-click { white-space: normal; width: max-content; max-width: calc(50% - var(--pw) / 2 - 30px + var(--pad) + max(0px, (100vw - var(--max) - 2 * var(--pad)) / 2) - 8px); }
+  .note-hold svg { top: calc(100% + 8px); inset-inline-start: -46px; transform: scaleX(-1) rotate(10deg); } /* under its last line, wrapped or not */
   .note-click { top: 80%; inset-inline-start: calc(50% + var(--pw) / 2 + 30px); }
   .note-click svg { top: -30px; inset-inline-start: -40px; transform: scaleX(-1) rotate(-60deg); }
   [dir="rtl"] .note-pose svg { transform: scaleX(-1); }
@@ -545,7 +562,7 @@ em { font-style: normal; }
   .waver { width: 240px; }
 }
 @media (min-width: 1240px) {
-  .stage { --pw: clamp(290px, calc((100svh - 130px) * 0.476), 360px); }
+  .stage { --pw: clamp(290px, calc((100svh - 130px - var(--ai)) * 0.476), 360px); }
 }
 
 /* ---------------------------------------------------------------- calm: no movement for those who asked for none */
