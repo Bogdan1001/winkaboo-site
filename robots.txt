@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bogdan1001.github.io/winkaboo-site/sitemap.xml
