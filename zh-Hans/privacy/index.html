@@ -106,37 +106,43 @@
     <p>Winkaboo 使用机器学习（一种 AI）来读取画面：找到镜头前的人，读取姿势、构图和场景，判断每一帧的清晰度以及是否睁眼，并为每次抓拍留下最佳一帧。所有这些都通过 Apple 的 Vision 和 Core ML 框架<strong>在你的 iPhone 上</strong>运行。除 Apple 自有的模型外，Winkaboo 还使用两个开源模型：Depth Anything V2 Small（深度）和 DETR ResNet-50（场景），二者均采用 Apache License 2.0 许可，并在 App 内的“设置”›“Winkaboo 怎么用”中注明。</p>
     <p>App Store 版本的 Winkaboo 不会向任何 AI 提供商或我们的任何服务器发送任何内容：不发送照片，不发送视频，也不发送相机的任何一帧画面。由于你拍摄的任何内容都不会到达我们这里，这些内容都不可能被用于训练任何人的模型。</p>
   </section>
+  <section id="optional" aria-labelledby="optional-h">
+    <h2 id="optional-h"><span class="n">4.</span> 使用我们服务器的可选功能</h2>
+    <p>App Store 版本的 Winkaboo 没有任何会向我们的服务器或 AI 提供商发送内容的功能。如果它提供此类功能，须遵循以下规则：</p>
+    <ul><li><strong>开启前始终关闭。</strong>该功能绝不会自行开启，不使用它也可以照常使用 Winkaboo。</li><li><strong>先征得你的许可。</strong>在发送任何内容之前，Winkaboo 会通过一个界面征求你的明确许可，说明发送什么、用于什么目的，以及由谁处理：我们，以及代表我们处理的任何公司（例如评估画面的 AI 提供商 TypeSafe）。除非你同意，否则不会发送任何内容。</li><li><strong>只发送你选择发送的内容。</strong>在你拍摄的所有内容中，只有你通过该功能发送的抓拍中的帧会离开你的手机。这些帧仅用于向你提供你所要求的结果，绝不会用于训练 AI 模型或投放广告。</li><li><strong>你的同意及其撤回。</strong>我们依据你的同意进行处理；对于你的抓拍中出现的其他人，则依据我们向你提供该结果的正当利益。你可以随时在 Winkaboo 的“设置”中撤回同意：此后不会再发送任何内容，撤回前已进行的处理不受影响。</li><li><strong>仅在必要期间内保存。</strong>你发送的内容，由我们以及代表我们处理的任何公司保存，保存期限仅为返回结果所需的时间，之后即予删除。</li><li><strong>在哪里处理。</strong>这些内容可能在你居住的国家/地区以外（包括美国）处理。对于从欧洲经济区、英国和瑞士进行的传输，我们依据下文“法律依据、保存期限、处理地点和你的权利”中所述的保障措施。代表我们处理的任何公司只能为向我们提供其服务而使用这些内容，并且必须给予与本政策及 Apple《App Store 审核指南》所要求的相同或同等的保护。</li></ul>
+    <p>在发布具有此类功能的版本之前，我们会更新本政策，说明该功能发送什么、由谁在何处处理以及处理多长时间。如果你不开启该功能，它不会发送任何内容，本政策的其余内容对你照常适用。</p>
+  </section>
   <section id="photos" aria-labelledby="photos-h">
-    <h2 id="photos-h"><span class="n">4.</span> 你手机上的照片</h2>
+    <h2 id="photos-h"><span class="n">5.</span> 你手机上的照片</h2>
     <ul><li>Winkaboo 每完成一次抓拍，都会在你手机上 Winkaboo 自己的存储空间中保留最佳一帧和最多两张备选，以及抓拍前几秒的一小段视频。</li><li>每次抓拍时，Winkaboo 还会保存一些技术测量值——清晰度、是否睁眼，以及画面和画面中人物的紧凑数字指纹——仅用于保留最佳一帧并跳过几乎重复的照片。这不是人脸识别：这些数据不会识别任何人，只保存在你的手机上，并会随抓拍一起删除。</li><li>最佳一帧会一直保留，直到你将其删除。备选保留 30 天，除非你已将其存储到“照片”。那一小段视频保留 30 天。</li><li>短片在你的手机上用一次拍摄中的好照片和其中最佳一次抓拍的那一小段视频制作，并与该次拍摄一起保留。</li><li>Winkaboo 的副本仅存储在你的手机上，且不包含在设备备份中，因此删除 App 即会将其删除。你可以随时在 Winkaboo 中删除抓拍，短片也会随之更新：去掉这些抓拍重新制作，或在该次拍摄剩下不到三次抓拍时删除。这会将它们从 App 中移除，而不会从“照片”中移除。</li></ul>
   </section>
   <section id="saving" aria-labelledby="saving-h">
-    <h2 id="saving-h"><span class="n">5.</span> 存储到“照片”与分享</h2>
+    <h2 id="saving-h"><span class="n">6.</span> 存储到“照片”与分享</h2>
     <p>只有在你要求时，Winkaboo 才会将照片或视频存储到你的“照片”图库。它请求的是“仅添加”权限，即可以向你的图库添加内容，但不能浏览图库。如果你通过系统分享菜单分享一次抓拍或一段短片，内容将去往你发送的地方，此后适用该 App 自己的隐私政策。</p>
   </section>
   <section id="reminders" aria-labelledby="reminders-h">
-    <h2 id="reminders-h"><span class="n">6.</span> 提醒</h2>
+    <h2 id="reminders-h"><span class="n">7.</span> 提醒</h2>
     <p>在 Winkaboo Unlimited 的免费试用开始前，Winkaboo 会询问是否需要在试用结束前提醒你，以便你及时取消。如果你轻点“…提醒我”，iOS 会询问是否允许 Winkaboo 向你发送通知（如果之前没有问过）。该提醒是本地通知：它在你的手机上创建和显示，与之相关的任何信息都不会发送给我们。你可以随时在“设置”›“通知”›“Winkaboo”中将其关闭。</p>
   </section>
   <section id="purchases" aria-labelledby="purchases-h">
-    <h2 id="purchases-h"><span class="n">7.</span> 购买</h2>
+    <h2 id="purchases-h"><span class="n">8.</span> 购买</h2>
     <p>订阅完全由 Apple 通过 App Store 处理。Winkaboo 会在你的手机上向 Apple 查询你的订阅是否有效。我们永远不会看到你的付款信息或你的 Apple 账户。</p>
   </section>
   <section id="dont" aria-labelledby="dont-h">
-    <h2 id="dont-h"><span class="n">8.</span> 我们不做的事</h2>
+    <h2 id="dont-h"><span class="n">9.</span> 我们不做的事</h2>
     <ul><li>无需账户：使用 Winkaboo 不需要注册，也不需要向我们提供姓名或电子邮件地址。</li><li>App 中没有广告，也没有其他公司的广告或分析软件。</li><li>不会在其他 App 或网站上跟踪你。</li><li>我们从不出售你的数据。</li></ul>
     <p>对于在 iPhone 设置中选择与 App 开发者共享的用户，Apple 可能会与我们共享其崩溃报告和 App 使用情况统计数据；其中不包含你的姓名或联系方式。</p>
   </section>
   <section id="emails" aria-labelledby="emails-h">
-    <h2 id="emails-h"><span class="n">9.</span> 你发给我们的电子邮件</h2>
+    <h2 id="emails-h"><span class="n">10.</span> 你发给我们的电子邮件</h2>
     <p>如果你写信至 <a href="mailto:hi@cyberfruit.ai">hi@cyberfruit.ai</a>，包括通过支持页面或 Winkaboo“设置”中的“发送反馈”（它只会在你自己的邮件 App 中打开一封新邮件，或显示我们的地址供你复制），我们会收到你的电子邮件地址和你所写的内容。我们仅为回复你而保留这些信息，不会将其用于任何其他目的，也不会与他人共享。你可以随时要求我们将其删除。</p>
   </section>
   <section id="site" aria-labelledby="site-h">
-    <h2 id="site-h"><span class="n">10.</span> 本网站</h2>
+    <h2 id="site-h"><span class="n">11.</span> 本网站</h2>
     <p>本网站不使用 Cookie、跟踪器、分析工具，也不加载来自其他网站的字体和脚本。本网站托管于 GitHub Pages 和 Cloudflare，二者均可能依据各自的隐私声明（<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>、<a href="https://www.cloudflare.com/privacypolicy/">Cloudflare</a>）记录访问信息，例如你的 IP 地址。</p>
   </section>
   <section id="basis" aria-labelledby="basis-h">
-    <h2 id="basis-h"><span class="n">11.</span> 法律依据、保存期限、处理地点和你的权利</h2>
+    <h2 id="basis-h"><span class="n">12.</span> 法律依据、保存期限、处理地点和你的权利</h2>
     <p><strong>我们为何可以使用这些数据。</strong>我们使用你发送给我们的内容来答复你：因为你提出了请求（应你的请求采取的措施，以及涉及你的订阅时我们与你之间的合同），也基于我们支持 Winkaboo 用户的正当利益。GitHub 和 Cloudflare 记录访问，以提供本网站并保障其安全，这基于我们安全运营本网站的正当利益。</p>
     <p><strong>保存多久。</strong>我们会将邮件往来最多保存至你最后一封邮件之后两年，然后将其删除，除非我们需要它来提出或抗辩法律主张。托管服务商按照其声明中规定的期限保存日志。</p>
     <p><strong>在哪里处理。</strong>我们的电子邮件由 Google（Google Workspace）托管，本网站由 GitHub 和 Cloudflare 托管。它们在美国及其他地区处理数据；我们在阿拉伯联合酋长国开展工作。对于从欧洲经济区、英国和瑞士进行的数据传输，我们依据这些服务商根据 EU–US Data Privacy Framework、其 UK Extension 以及 Swiss–US Data Privacy Framework 获得的认证，或依据欧盟委员会的标准合同条款及其英国和瑞士的对应条款。如需这些保障措施的副本，请写信给我们。</p>
@@ -144,25 +150,26 @@
     <p><strong>你的反对权。</strong>在我们依据正当利益处理数据的情况下，你可以随时基于与你的特定情况有关的理由提出反对，方法是写信至 <a href="mailto:hi@cyberfruit.ai">hi@cyberfruit.ai</a>。</p>
   </section>
   <section id="rights" aria-labelledby="rights-h">
-    <h2 id="rights-h"><span class="n">12.</span> 你的选择和权利</h2>
+    <h2 id="rights-h"><span class="n">13.</span> 你的选择和权利</h2>
     <p>你可以在 App 中删除你的照片，在“设置”中关闭相机和“照片”访问权限，并通过 Apple 取消你的订阅。根据你所在的地区，你还可能对你的个人数据享有法定权利，例如访问权和删除权；请发送电子邮件给我们，我们会提供帮助。</p>
   </section>
   <section id="children" aria-labelledby="children-h">
-    <h2 id="children-h"><span class="n">13.</span> 儿童</h2>
+    <h2 id="children-h"><span class="n">14.</span> 儿童</h2>
     <p>Winkaboo 并非面向 13 岁以下的儿童，我们也不会在知情的情况下收集儿童的个人信息。如果你认为有儿童向我们发送了任何内容，请发送电子邮件给我们，我们会将其删除。</p>
   </section>
   <section id="changes" aria-labelledby="changes-h">
-    <h2 id="changes-h"><span class="n">14.</span> 变更</h2>
+    <h2 id="changes-h"><span class="n">15.</span> 变更</h2>
     <p>如果我们变更本政策，我们会更新上方的生效日期。如果变更影响到我们收集的内容，我们会在 App 中或本网站上予以说明。</p>
   </section>
   <section id="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h"><span class="n">15.</span> 联系我们</h2>
+    <h2 id="contact-h"><span class="n">16.</span> 联系我们</h2>
     <p><span class="nowrap">CyberFruit Lab - FZCO</span>，一家位于阿拉伯联合酋长国迪拜的自由区公司<br><a href="mailto:hi@cyberfruit.ai">hi@cyberfruit.ai</a></p>
   </section>
+    <footer class="doc-foot"><p>Apple、Apple 标志、Core ML、iPad 和 iPhone 是 Apple Inc. 在美国及其他国家和地区注册的商标。App Store 是 Apple Inc. 在美国及其他国家和地区注册的服务标记。IOS 是 Cisco 在美国及其他国家和地区的商标或注册商标，经许可后使用。</p></footer>
   </article>
   <nav class="toc" aria-labelledby="toc-h">
     <p id="toc-h">本页内容</p>
-    <ol><li><a href="#who">我们是谁</a></li><li><a href="#camera">相机</a></li><li><a href="#ai">手机上的 AI</a></li><li><a href="#photos">你手机上的照片</a></li><li><a href="#saving">存储到“照片”与分享</a></li><li><a href="#reminders">提醒</a></li><li><a href="#purchases">购买</a></li><li><a href="#dont">我们不做的事</a></li><li><a href="#emails">你发给我们的电子邮件</a></li><li><a href="#site">本网站</a></li><li><a href="#basis">法律依据、保存期限、处理地点和你的权利</a></li><li><a href="#rights">你的选择和权利</a></li><li><a href="#children">儿童</a></li><li><a href="#changes">变更</a></li><li><a href="#contact">联系我们</a></li></ol>
+    <ol><li><a href="#who">我们是谁</a></li><li><a href="#camera">相机</a></li><li><a href="#ai">手机上的 AI</a></li><li><a href="#optional">使用我们服务器的可选功能</a></li><li><a href="#photos">你手机上的照片</a></li><li><a href="#saving">存储到“照片”与分享</a></li><li><a href="#reminders">提醒</a></li><li><a href="#purchases">购买</a></li><li><a href="#dont">我们不做的事</a></li><li><a href="#emails">你发给我们的电子邮件</a></li><li><a href="#site">本网站</a></li><li><a href="#basis">法律依据、保存期限、处理地点和你的权利</a></li><li><a href="#rights">你的选择和权利</a></li><li><a href="#children">儿童</a></li><li><a href="#changes">变更</a></li><li><a href="#contact">联系我们</a></li></ol>
   </nav>
 </div>
 </main>

@@ -150,18 +150,13 @@ em { font-style: normal; }
 .is-live .step { opacity: 0.32; }
 .is-live .step.is-on { opacity: 1; }
 
-/* ---------------------------------------------------------------- the phone */
+/* ---------------------------------------------------------------- the phone (a generic phone: no Apple-specific island or buttons, Apple's marketing guidelines) */
 .stage { --pw: 300px; --ai: 37px; } /* --ai: the AI note above the phone, so the phone and its note fit together */
 .phone {
   position: relative; width: var(--pw); padding: calc(var(--pw) * 0.032); border-radius: calc(var(--pw) * 0.16);
   background: linear-gradient(150deg, #514840 0%, #1a1511 32%, #2c2620 60%, #120e0b 100%);
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.07) inset, 0 1px 1px rgba(255, 255, 255, 0.18) inset, 0 60px 90px -45px rgba(75, 33, 12, 0.6), 0 26px 36px -26px rgba(75, 33, 12, 0.45);
 }
-.phone::before, .phone::after { content: ""; position: absolute; width: 3px; border-radius: 2px; background: #2a231e; }
-.phone::before { inset-inline-start: -2px; top: 22%; height: 9%; box-shadow: 0 calc(var(--pw) * 0.24) 0 #2a231e; }
-.phone::after { inset-inline-end: -2px; top: 26%; height: 14%; }
-[dir="rtl"] .phone::before { inset-inline-start: auto; left: -2px; }
-[dir="rtl"] .phone::after { inset-inline-end: auto; right: -2px; }
 .screen {
   --pt: calc(100cqw / 440);
   position: relative; aspect-ratio: 440 / 956; overflow: hidden; container-type: inline-size;
@@ -171,7 +166,6 @@ em { font-style: normal; }
 .screen * { box-sizing: border-box; }
 .screen img { width: 100%; height: 100%; object-fit: cover; }
 .status { position: absolute; inset: 0 0 auto; z-index: 8; height: calc(61 * var(--pt)); display: flex; align-items: center; justify-content: space-between; padding: 0 calc(38 * var(--pt)) 0 calc(44 * var(--pt)); font: 600 calc(17 * var(--pt)) / 1 -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; color: #fff; direction: ltr; }
-.island { position: absolute; left: 50%; top: calc(13 * var(--pt)); width: calc(124 * var(--pt)); height: calc(36 * var(--pt)); border-radius: 99px; background: #000; translate: -50% 0; }
 .sys { display: flex; align-items: center; gap: calc(6 * var(--pt)); }
 .sys svg { fill: currentColor; height: calc(12 * var(--pt)); width: auto; }
 .sys svg:last-child { height: calc(13 * var(--pt)); }
@@ -463,6 +457,9 @@ em { font-style: normal; }
 .doc ul, .doc ol { padding-inline-start: 1.3rem; }
 .doc li { margin: 0.4rem 0; }
 .doc .intro { font-size: 1.125rem; }
+/* Apple's credit lines, at the foot of the Terms, the Privacy Policy and the 表記 */
+.doc-foot { margin: 48px 0 0; padding-top: 16px; border-top: 1px solid var(--line); font-size: 0.8125rem; color: var(--ink-2); }
+.doc-foot p { margin: 0; }
 .summary { margin: 0 0 8px; padding: 22px 24px 18px; border-radius: 26px; background: var(--sage); }
 .summary h2 { margin: 0 0 6px; }
 .summary ul { margin: 0; }
